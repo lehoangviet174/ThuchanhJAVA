@@ -1,27 +1,36 @@
 import java.util.Scanner;
-
-class DienTichChuViHT {
-    public static double tinhDienTich(double r) {
-        return r * r * 3.14;
+public class HinhTron {
+    public static void main(String[] args) throws Exception {
+        
     }
 
-    public static double tinhChuVi(double r) {
-        return r * 2 * 3.14;
+    final float PI = 3.14f;
+    float r;
+    float cv;
+    float dt;
+    void NhapBanKinh()
+    {
+        System.out.print("Nhap vao ban kinh hinh tron: ");
+        Scanner sc = new Scanner(System.in);
+        r = sc.nextFloat();
+        sc.close();
     }
 
-    public static void main(String[] args) {
-        double r;
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Nhập bán kính hình tròn: ");
-       
-        r = scanner.nextDouble();
-       
-        System.out.println("Diện tích hình tròn là: " + tinhDienTich(r));
-        
-        System.out.println("Chu vi hình tròn là: "+ tinhChuVi(r));
-        
-        System.out.println("----------------------------");
-        
-        System.out.println("Chương trình nay được đăng tại Freetuts.net");
+    void TinhChuVi()
+    {
+        cv = 2 * PI * r;
     }
+
+    void TinhDienTinh()
+    {
+        dt = PI * r * r;
+    }
+    void inChuVi()
+    {
+        System.out.print("Chu vi hinh tron: " + cv);
+    }
+    void inDienTich()
+    {
+        System.out.print("Dien tich hinh tron: " + dt);
+    }
+}
